@@ -1,6 +1,6 @@
 ## Ninja One Device CRUD App
 
-Test project to fetch some data from a server, display, allow filtering and sorting, and basic CRUD functions with the server.
+Test project to fetch some data from a server, display, allow filtering and sorting, and basic CRUD functions.
 
 ## Tech Used
 
