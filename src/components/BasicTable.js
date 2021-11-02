@@ -16,9 +16,8 @@ function GlobalFilter({ preGlobalFilteredRows, globalFilter, setGlobalFilter, mo
   const [value, setValue] = React.useState(globalFilter);
 
   // if modal opens up we'll clear the filter for adding new devices
-  if (modalOpen && value.length > 0) {
+  if (modalOpen && value) {
     setValue('');
-    setGlobalFilter(undefined);
   }
   const onChange = useAsyncDebounce((value) => {
     setGlobalFilter(value || undefined);
@@ -28,7 +27,7 @@ function GlobalFilter({ preGlobalFilteredRows, globalFilter, setGlobalFilter, mo
     <div className={styles.filter}>
       <FormControl sx={{ m: 1, width: 300 }} style={{ marginLeft: '0px' }}>
         <InputLabel id="filter-label">
-          <FilterAltOutlined className={styles.icon} /> Filter Type
+          <FilterAltOutlined className={styles.icon} /> Filter by Type
         </InputLabel>
         <Select
           labelId="filter-label"
