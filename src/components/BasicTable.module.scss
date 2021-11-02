@@ -1,0 +1,80 @@
+.tableWapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.table {
+  padding-bottom: 20px;
+}
+
+$color: #ccc;
+
+.icon {
+  font-size: 1rem !important;
+  position: relative;
+  top: 2px;
+}
+
+th {
+  font-weight: normal;
+  color: #fff;
+}
+
+// cleaning up space for mobile
+@media (max-width: 568px) {
+  td:nth-of-type(2),
+  th:nth-of-type(2) {
+    display: none;
+  }
+}
+
+table {
+  /* Make sure the inner table is always as wide as needed */
+  width: 100%;
+  border-spacing: 0;
+
+  tr {
+    :last-child {
+      td {
+        border-bottom: 0;
+      }
+    }
+    cursor: pointer;
+    &:hover {
+      background: #d0ecfd;
+      td:last-of-type {
+        background: #fff;
+      }
+    }
+  }
+
+  th,
+  td {
+    margin: 0;
+    padding: 0.5rem;
+    border-bottom: 1px solid $color;
+    border-right: 1px solid $color;
+    &.collapse {
+      width: 0.0000000001%;
+    }
+    &:first-of-type {
+      border-left: 1px solid $color;
+    }
+
+    :last-child {
+      border-right: 0;
+    }
+  }
+  td {
+    padding: 0.2rem;
+    &:last-of-type {
+      border: 0px;
+      padding: 0px;
+      text-align: left;
+    }
+  }
+}
+
+.filter {
+  margin-right: auto;
+}
