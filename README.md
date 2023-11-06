@@ -1,4 +1,4 @@
-## Ninja One Device CRUD App
+##  CRUD App built in React 
 
 Test project to fetch some data from a server, display, allow filtering and sorting, and basic CRUD functions.
 
